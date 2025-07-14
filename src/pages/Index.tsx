@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import StorefrontHeader from "@/components/StorefrontHeader";
+import HeroSection from "@/components/HeroSection";
+import CategoryPanel from "@/components/CategoryPanel";
+import FeaturedProducts from "@/components/FeaturedProducts";
+import RecommendationsSection from "@/components/RecommendationsSection";
+import StorytellingSection from "@/components/StorytellingSection";
+import UGCGallery from "@/components/UGCGallery";
+import TestimonialsSlider from "@/components/TestimonialsSlider";
+import NewsletterSection from "@/components/NewsletterSection";
+import StorefrontFooter from "@/components/StorefrontFooter";
+import PurchasePopup from "@/components/PurchasePopup";
+import RetargetingBanner from "@/components/RetargetingBanner";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <StorefrontHeader />
+      <HeroSection />
+      <CategoryPanel />
+      <FeaturedProducts />
+      <RecommendationsSection />
+      <StorytellingSection />
+      <UGCGallery />
+      <TestimonialsSlider />
+      <NewsletterSection />
+      <StorefrontFooter />
+      
+      {/* Growth enabler components */}
+      <PurchasePopup />
+      <RetargetingBanner />
     </div>
   );
 };

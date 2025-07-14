@@ -18,11 +18,16 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // E-commerce specific variants
+        hero: "button-gradient text-primary-foreground shadow-luxury font-semibold tracking-wide hover:scale-105",
+        premium: "bg-foreground text-background hover:bg-foreground/90 shadow-lg",
+        cart: "bg-success text-success-foreground hover:bg-success/90 shadow-md",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        lg: "h-12 rounded-lg px-8 text-base",
+        xl: "h-14 rounded-xl px-10 text-lg",
         icon: "h-10 w-10",
       },
     },
