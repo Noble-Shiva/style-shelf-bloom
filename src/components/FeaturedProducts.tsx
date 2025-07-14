@@ -1,5 +1,6 @@
 import { Heart, ShoppingCart, Eye, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import productSerum from "@/assets/product-serum.jpg";
 import productJewelry from "@/assets/product-jewelry.jpg";
 import productHeadphones from "@/assets/product-headphones.jpg";
@@ -100,9 +101,11 @@ const FeaturedProducts = () => {
                     <Button size="icon" variant="secondary" className="rounded-full">
                       <Heart className="h-4 w-4" />
                     </Button>
-                    <Button size="icon" variant="secondary" className="rounded-full">
-                      <Eye className="h-4 w-4" />
-                    </Button>
+                    <Link to={`/product/${product.id}`}>
+                      <Button size="icon" variant="secondary" className="rounded-full">
+                        <Eye className="h-4 w-4" />
+                      </Button>
+                    </Link>
                     <Button size="icon" variant="cart" className="rounded-full">
                       <ShoppingCart className="h-4 w-4" />
                     </Button>
@@ -119,9 +122,11 @@ const FeaturedProducts = () => {
               
               {/* Product info */}
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {product.name}
-                </h3>
+                <Link to={`/product/${product.id}`}>
+                  <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {product.name}
+                  </h3>
+                </Link>
                 
                 {/* Rating */}
                 <div className="flex items-center space-x-1 mb-3">
